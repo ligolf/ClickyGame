@@ -43,10 +43,10 @@ class App extends Component {
           ),
           score: this.state.score + 1
         },
-//if you get all 12 fish corrent you get a congrats message and the game resets        
+//if you get all 12 images corrent you get a congrats message and the game resets        
         () => {
           if (this.state.score === 12) {
-            alert("Yay! You Win!");
+            alert("Congradulations, You did it!");
             this.setState({
               daVinci: this.state.daVinci.sort(function(a, b) {
                 return 0.5 - Math.random();
@@ -60,7 +60,7 @@ class App extends Component {
     }
   };
 
-//the order of components to be rendered: navbar, jumbotron, Card, footer 
+//the order of components to be rendered: navbar, Card, footer 
   render() {
     return (
       <div>
